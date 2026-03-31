@@ -12,6 +12,8 @@
       --muted: #94a3b8;
       --accent: #38bdf8;
       --border: #334155;
+      --button: #0284c7;
+      --button-hover: #0369a1;
     }
 
     * {
@@ -27,17 +29,23 @@
     }
 
     .container {
-      max-width: 950px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.25rem 4rem;
     }
 
     header {
-      text-align: center;
       padding: 4rem 1rem 2rem;
     }
 
-    h1 {
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
       font-size: 3rem;
       margin: 0;
     }
@@ -57,6 +65,37 @@
     .contact a {
       color: var(--accent);
       text-decoration: none;
+    }
+
+    .buttons {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--button);
+      color: white;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--button-hover);
+    }
+
+    .profile-pic {
+      width: 220px;
+      max-width: 100%;
+      border-radius: 16px;
+      border: 2px solid var(--border);
+      display: block;
+      margin: 0 auto;
     }
 
     section {
@@ -127,6 +166,20 @@
       color: var(--accent);
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -134,7 +187,11 @@
       font-size: 0.9rem;
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 800px) {
+      .hero {
+        grid-template-columns: 2fr 1fr;
+      }
+
       .skills-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -144,12 +201,27 @@
 <body>
   <div class="container">
     <header>
-      <h1>Mofei Wang</h1>
-      <p class="subtitle">Data Scientist</p>
-      <div class="contact">
-        Vaughan, ON ·
-        <a href="mailto:mofeiwang@hotmail.com">mofeiwang@hotmail.com</a> ·
-        <a href="https://github.com/pianissix7mo" target="_blank">GitHub</a>
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Mofei Wang</h1>
+          <p class="subtitle">Data Scientist</p>
+          <div class="contact">
+            Vaughan, ON ·
+            <a href="mailto:mofeiwang@hotmail.com">mofeiwang@hotmail.com</a> ·
+            <a href="https://github.com/pianissix7mo" target="_blank">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/mofeidata/" target="_blank">LinkedIn</a>
+          </div>
+
+          <div class="buttons">
+            <a class="button" href="mailto:mofeiwang@hotmail.com">Contact Me</a>
+            <a class="button" href="https://github.com/pianissix7mo" target="_blank">View GitHub</a>
+            <a class="button" href="resume.pdf" target="_blank">Download Resume</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="profile.jpg" alt="Mofei Wang" class="profile-pic" />
+        </div>
       </div>
     </header>
 
@@ -160,6 +232,10 @@
         statistical modeling, and large-scale data analysis. Experienced in building predictive models,
         developing end-to-end data pipelines, and creating visualizations that support data-driven
         decision-making.
+      </p>
+      <p>
+        My interests span machine learning, finance, automation, and applied analytics. I also enjoy
+        mathematics, hardware systems, and music.
       </p>
     </section>
 
@@ -260,13 +336,33 @@
     </section>
 
     <section>
+      <h2>Photos</h2>
+      <p>You can add personal or professional photos here. Replace the sample file names with your own images.</p>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+      </div>
+    </section>
+
+    <section>
+      <h2>Music</h2>
+      <p>
+        If you’d like, you can share your musical side here by embedding a YouTube performance,
+        Spotify playlist, or SoundCloud track.
+      </p>
+      <p>Example:</p>
+      <ul>
+        <li><a href="https://www.youtube.com/" target="_blank">My YouTube performances</a></li>
+        <li><a href="https://open.spotify.com/" target="_blank">Favorite playlist</a></li>
+      </ul>
+    </section>
+
+    <section>
       <h2>Links</h2>
-      <p>
-        <a href="https://github.com/pianissix7mo" target="_blank">GitHub Profile</a>
-      </p>
-      <p>
-        <a href="mailto:mofeiwang@hotmail.com">Email Me</a>
-      </p>
+      <p><a href="https://github.com/pianissix7mo" target="_blank">GitHub Profile</a></p>
+      <p><a href="https://www.linkedin.com/in/mofeidata/" target="_blank">LinkedIn</a></p>
+      <p><a href="mailto:mofeiwang@hotmail.com">Email Me</a></p>
     </section>
 
     <footer>
