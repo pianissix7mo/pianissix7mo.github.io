@@ -3,87 +3,264 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <title>Mofei Wang | Data Scientist</title>
   <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
       margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
+
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
     }
+
     header {
       text-align: center;
       padding: 4rem 1rem 2rem;
     }
+
     h1 {
       font-size: 3rem;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+
+    .contact {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: white;
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      margin-top: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    .item {
+      margin-bottom: 1.4rem;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
       margin-bottom: 0.5rem;
     }
-    .subtitle {
-      color: #94a3b8;
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
     }
-    section {
-      background: #1e293b;
-      margin: 1.5rem 0;
-      padding: 1.5rem;
-      border-radius: 12px;
-    }
+
     a {
-      color: #38bdf8;
+      color: var(--accent);
     }
-    .project {
-      margin-bottom: 1rem;
-    }
+
     footer {
       text-align: center;
-      color: #94a3b8;
-      padding: 2rem 0;
+      color: var(--muted);
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 700px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Your Name</h1>
-      <p class="subtitle">Student | Developer | Creator</p>
+      <h1>Mofei Wang</h1>
+      <p class="subtitle">Data Scientist</p>
+      <div class="contact">
+        Vaughan, ON · Canadian Citizen ·
+        <a href="mailto:mofeiwang@hotmail.com">mofeiwang@hotmail.com</a> ·
+        <a href="https://github.com/pianissix7mo" target="_blank">GitHub</a>
+      </div>
     </header>
 
     <section>
       <h2>About Me</h2>
       <p>
-        I’m a passionate builder interested in technology, coding, and creative projects.
-        This website is where I share my work and background.
+        Data Scientist with a Harvard ALM in Data Science and a strong foundation in machine learning,
+        statistical modeling, and large-scale data analysis. Experienced in building predictive models,
+        developing end-to-end data pipelines, and creating visualizations that support data-driven
+        decision-making.
       </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+
+      <div class="item">
+        <h3>Harvard University</h3>
+        <div class="meta">Master of Liberal Arts (ALM) in Extension Studies, Data Science · Feb 2025 · Cambridge, MA</div>
+        <p>GPA: 3.62/4.0</p>
+      </div>
+
+      <div class="item">
+        <h3>University of Toronto</h3>
+        <div class="meta">Honors Bachelor of Science (BSc), Statistics and Mathematics (Double Major) · Nov 2019 · Toronto, ON</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <p><strong>Programming:</strong> Python, SQL, R, MATLAB</p>
+          <p><strong>Libraries:</strong> Scikit-learn, XGBoost, LightGBM, H2O, NumPy, Pandas, Matplotlib, spaCy</p>
+        </div>
+        <div>
+          <p><strong>Data Science:</strong> Statistical Analysis, Feature Engineering, NLP, Time Series, Deep Learning, Data Visualization</p>
+          <p><strong>Tools:</strong> Power BI, Tableau, AWS, Git, Excel, LaTeX, LLM APIs</p>
+          <p><strong>Languages:</strong> English, Mandarin</p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Projects</h2>
-      <div class="project">
-        <h3>Project Name</h3>
-        <p>Description of what it does and what tools you used.</p>
+
+      <div class="item">
+        <h3>AI-Powered FDA Approval Prediction</h3>
+        <div class="meta">Evergrowth BioHealthcare Capital / Harvard · Dec 2024</div>
+        <ul>
+          <li>Collected, merged, and preprocessed 10+ large-scale datasets with 10M+ records from AACT and Cortellis.</li>
+          <li>Developed a rule-based matching algorithm to map drugs to disease types with 98% accuracy.</li>
+          <li>Created interactive dashboards in Power BI to communicate key insights to stakeholders.</li>
+          <li>Built predictive models using XGBoost, LightGBM, and H2O GBM, improving test accuracy by 10%.</li>
+        </ul>
       </div>
-      <div class="project">
-        <h3>Another Project</h3>
-        <p>Short description of your second project.</p>
+
+      <div class="item">
+        <h3>Oil and Gas Production Prediction</h3>
+        <div class="meta">Harvard University · Dec 2022</div>
+        <ul>
+          <li>Performed exploratory data analysis and applied Lasso regression for feature selection.</li>
+          <li>Implemented Random Forest and Gradient Boosting models, increasing test accuracy by 25%.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Markov Chain Model for Casino Profit Maximization</h3>
+        <div class="meta">Harvard University · Jul 2021</div>
+        <ul>
+          <li>Used Monte Carlo simulations to optimize slot machine winning rates for profit maximization.</li>
+          <li>Developed a closed-form analytical solution that reduced computing time by 99.8%.</li>
+        </ul>
       </div>
     </section>
 
     <section>
-      <h2>Contact</h2>
+      <h2>Experience</h2>
+
+      <div class="item">
+        <h3>Mathematics Instructor</h3>
+        <div class="meta">Global Education Inc. · Toronto, ON · Jan 2020 – Present</div>
+        <ul>
+          <li>Instructed high school and university-level Calculus and Statistics to 50+ students annually.</li>
+          <li>Analyzed student performance data to create personalized, data-driven lesson plans.</li>
+          <li>Coached AMC and Euclid contestants, with students reaching top 1% rankings across Canada.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Financial Analyst (Volunteer)</h3>
+        <div class="meta">Canadian Hemochromatosis Society · Richmond, BC · Mar 2013 – Sep 2014</div>
+        <ul>
+          <li>Analyzed and visualized financial data in Excel to identify trends and insights.</li>
+          <li>Prepared reports and presented updates to support management decision-making.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Achievements & Interests</h2>
+      <ul>
+        <li><strong>Mathematics:</strong> Ranked top 1% in both AMC 12 and Euclid Mathematics Contest.</li>
+        <li><strong>LLM & Automation:</strong> Passionate about using LLMs to build automation tools, explore prompt engineering, and develop agentic workflows.</li>
+        <li><strong>Finance:</strong> Applied LLMs and machine learning to detect S&P 500 patterns and built an automated crypto alert system using AWS.</li>
+        <li><strong>Hardware:</strong> Built and maintained a 40+ GPU cluster for deep learning training and cryptocurrency mining.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Links</h2>
       <p>
-        GitHub: <a href="https://github.com/pianissix7mo" target="_blank">pianissix7mo</a>
+        <a href="https://github.com/pianissix7mo" target="_blank">GitHub Profile</a>
       </p>
-      <p>Email: your-email@example.com</p>
+      <p>
+        <a href="mailto:mofeiwang@hotmail.com">Email Me</a>
+      </p>
     </section>
 
     <footer>
-      <p>© 2025 Your Name</p>
+      <p>© 2025 Mofei Wang</p>
     </footer>
   </div>
 </body>
